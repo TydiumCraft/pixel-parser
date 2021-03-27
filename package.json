@@ -1,0 +1,21 @@
+{
+  "name": "pixel-parser",
+  "version": "1.0.0",
+  "description": "A parser for the PixelPolice log files in TydiumCraft",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TydiumCraft/PixelParser.git"
+  },
+  "author": "higbead",
+  "bugs": {
+    "url": "https://github.com/TydiumCraft/PixelParser/issues"
+  },
+  "homepage": "https://github.com/TydiumCraft/PixelParser#readme",
+  "devDependencies": {
+    "eslint": "^7.22.0"
+  }
+}
