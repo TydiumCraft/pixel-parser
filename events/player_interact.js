@@ -34,4 +34,8 @@ module.exports = class PlayerInteractEvent extends PlayerEvent {
 	getLocations() {
 		return [this.player.location, this.clicked ? this.clicked.location : undefined]
 	}
+
+	toString() {
+		return `${this.player} ${this.action} on ${this.clicked} with ${this.item}`
+	}
 }
