@@ -25,6 +25,7 @@ Number.prototype.inRange = function(min, max) {
  * 			|"inventory_close"
  * 			|"inventory_move"
  * 			|"inventory_open"
+ * 			|"player_interact"
  * 		)[]?,
  * 		names: String[]?,
  * 		timeframe: {
@@ -70,7 +71,7 @@ Number.prototype.inRange = function(min, max) {
  * 			|"void"
  * 			|"wither"
  * 		)[]?,
- * 		inventory_actions: (
+ * 		actions: (
  * 			 "clone_stack"
  * 			|"collect_to_cursor"
  * 			|"drop_all_cursor"
@@ -90,6 +91,11 @@ Number.prototype.inRange = function(min, max) {
  * 			|"place_some"
  * 			|"swap_with_cursor"
  * 			|"unknown"
+ * 			|"left_click_air"
+ * 			|"left_click_block"
+ * 			|"physical"
+ * 			|"right_click_air"
+ * 			|"right_click_block"
  * 		)[]?,
  *   	slot_types: (
  * 			 "armor"
@@ -130,8 +136,8 @@ exports.filter = function filter(events, params) {
 		if (params.timeframe && (!event.date || !event.date.getTime().inRange(params.timeframe.after.getTime(), params.timeframe.before.getTime()))) {
 			return false
 		}
-		if (params.inventory_actions && (!event.action || !params.inventory_actions.find(event.action))) {
 			return false
+		if (params.actions && (!event.action || !params.actions.find(event.action))) {
 		}
 		if (params.slot_types && (!event.slot_type || !params.slot_types.find(event.slot_type))) {
 			return false
