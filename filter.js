@@ -27,6 +27,8 @@ Number.prototype.inRange = function(min, max) {
  * 			|"inventory_move"
  * 			|"inventory_open"
  * 			|"player_interact"
+ * 			|"player_chat"
+ * 			|"player_command"
  * 		)[]?,
  * 		names: String[]?,
  * 		timeframe: {

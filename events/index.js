@@ -30,6 +30,8 @@ module.exports = class Event {
 		 * 		|"inventory_close"
 		 * 		|"inventory_move"
 		 * 		|"inventory_open"
+		 * 		|"player_chat"
+		 * 		|"player_command"
 		 * )}
 		 */
 		this.event = data.event
